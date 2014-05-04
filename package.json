@@ -1,0 +1,12 @@
+{
+  "name": "twitter-rss",
+  "version": "0.0.0",
+  "description": "Convert Twitter timeline into RSS",
+  "author": "Daniel Rinehart <danielr@neophi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.8.0",
+    "request": "^2.34.0",
+    "rss": "^0.3.2"
+  }
+}
