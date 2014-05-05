@@ -1,5 +1,7 @@
 'use strict';
 
+// https://dev.twitter.com/docs/api/1.1
+
 var request = require('request');
 
 var OAUTH2_TOKEN_URL = 'https://api.twitter.com/oauth2/token';

@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.8.0",
+    "debug": "^0.8.1",
     "request": "^2.34.0",
     "rss": "^0.3.2"
   }

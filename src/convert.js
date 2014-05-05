@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var async = require('async');
+var debug = require('debug')('convert');
 var config = require('../config');
 var RSS = require('rss');
 var users = JSON.parse(fs.readFileSync('json/users.json'));
@@ -36,7 +37,7 @@ function convert(user, timeline, callback) {
       'date': item.created_at
     });      
   });
-  console.log('Success ' + user.screen_name);
+  debug('Success ' + user.screen_name);
   fs.writeFile('rss/' + user.screen_name + '.xml', feed.xml(), callback);
 }
 
@@ -52,5 +53,5 @@ async.each(config.screenNames, function(screenName, callback) {
   if (err) {
     throw err;
   }
-  console.log('Success');
+  debug('Success');
 });
