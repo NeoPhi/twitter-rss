@@ -46,7 +46,7 @@ function userTimeline(accessToken, screenName, callback) {
       return callback(err);
     }
     if (httpResponse.statusCode !== 200) {
-      return callback(new Error('Wanted HTTP response code 200 got ' + httpResponse.statusCode));
+      return callback(new Error('Wanted HTTP response code 200 got ' + httpResponse.statusCode + ' for ' + screenName));
     }
     try {
       var json = JSON.parse(body);
